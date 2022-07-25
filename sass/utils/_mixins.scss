@@ -1,0 +1,30 @@
+@import './decimals';
+
+@mixin section($padding-top: false, $padding-bottom: false) {
+  @if ($padding-top) {
+    padding-top: $padding-top;
+  } @else {
+    padding-top: 94px;
+  }
+  @if ($padding-bottom) {
+    padding-bottom: $padding-bottom;
+  } @else {
+    padding-bottom: 94px;
+  }
+}
+
+@mixin fonts($fs, $lh, $fw: false, $ls: false) {
+  font-size: $fs;
+
+  line-height: decimal-round($lh / $fs);
+
+  @if ($fw) {
+    font-weight: $fw;
+  }
+
+  @if ($ls) {
+    letter-spacing: $ls;
+  } @else {
+    letter-spacing: 0.03em;
+  }
+}

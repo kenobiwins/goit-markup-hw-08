@@ -1,0 +1,40 @@
+.section-regular {
+  @include section();
+  .section-regular__title {
+    margin-bottom: 50px;
+  }
+  .section-regular__list {
+  }
+}
+
+.regular-list {
+  gap: var(--indent);
+
+  &__item {
+    --items: 6;
+  }
+
+  &__link {
+    width: 170px;
+    height: 92px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: var(--social-color) 1px solid;
+    border-radius: 4px;
+
+    color: var(--social-color);
+
+    transform: scale(1);
+    transition: color var(--transition), border var(--transition), transform var(--transition);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+    border: var(--accent-color) 1px solid;
+    transform: scale(1.1);
+  }
+}
