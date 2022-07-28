@@ -544,12 +544,27 @@ img {
   height: 2px;
   left: 0;
   background-color: #000000;
+  transition: transform var(--transition), background-color var(--transition);
 }
 .menu-open__stick::before {
   top: -8px;
 }
 .menu-open__stick::after {
   top: 8px;
+}
+
+.is-open .menu-open__stick {
+  background-color: transparent;
+}
+.is-open .menu-open__stick::after {
+  top: 0;
+  transform: rotate(45deg);
+  background-color: var(--accent-color);
+}
+.is-open .menu-open__stick::before {
+  top: 0;
+  transform: rotate(-45deg);
+  background-color: var(--accent-color);
 }
 
 @media screen and (max-width: 1199px) {

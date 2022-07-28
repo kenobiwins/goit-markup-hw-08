@@ -118,6 +118,7 @@
       height: 2px;
       left: 0;
       background-color: #000000;
+      transition: transform var(--transition), background-color var(--transition);
     }
     &::before {
       top: -8px;
@@ -127,6 +128,17 @@
     }
   }
 }
+.is-open .menu-open__stick {
+  background-color: transparent;
 
-.is-open {
+  &::after {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: var(--accent-color);
+  }
+  &::before {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: var(--accent-color);
+  }
 }
