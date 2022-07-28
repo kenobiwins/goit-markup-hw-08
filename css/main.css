@@ -536,6 +536,7 @@ img {
   width: 100%;
   height: 2px;
   background-color: #000000;
+  transition: transform var(--transition), background-color var(--transition);
 }
 .menu-open__stick::before, .menu-open__stick::after {
   content: "";
