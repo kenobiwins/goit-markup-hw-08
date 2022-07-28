@@ -1,22 +1,65 @@
 .section-portfolio {
+  @media screen and (max-width: 767px) {
+    @include section(60px, 60px);
+  }
+
   @include section();
+
   .section-portfolio__sample {
-    margin-bottom: 50px;
     gap: 8px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+
+    @include mq(tablet) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 50px;
+    }
   }
 }
 .filter {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  @include mq(tablet) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq(desktop) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .gallery {
   gap: var(--indent);
 
+  @include mq(tablet) {
+    justify-content: start;
+  }
+
   &__item {
-    --items: 3;
     transition: box-shadow var(--transition);
+
+    @media screen and (max-width: 767px) {
+      --items: 1;
+    }
+
+    @include mq(tablet) {
+      --items: 2;
+    }
+    @include mq(desktop) {
+      --items: 3;
+    }
   }
   &__item:hover,
   &__item:focus {

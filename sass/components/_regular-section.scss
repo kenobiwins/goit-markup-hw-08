@@ -1,9 +1,23 @@
 .section-regular {
-  @include section();
-  .section-regular__title {
-    margin-bottom: 50px;
+  @media screen and (max-width: 1199px) {
+    @include section(60px, 60px);
   }
-  .section-regular__list {
+
+  @include mq(desktop) {
+    @include section();
+  }
+
+  &__title {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+      @include fonts(28px, 32px);
+    }
+    @include mq(desktop) {
+      margin-bottom: 50px;
+      @include fonts(36px, 42px);
+    }
+  }
+  &__list {
   }
 }
 
@@ -11,12 +25,20 @@
   gap: var(--indent);
 
   &__item {
-    --items: 6;
+    @media screen and (max-width: 767px) {
+      --items: 2;
+    }
+    @include mq(tablet) {
+      --items: 3;
+    }
+    @include mq(desktop) {
+      --items: 6;
+    }
   }
 
   &__link {
-    width: 170px;
-    height: 92px;
+    width: 100%;
+    height: auto;
 
     display: flex;
     justify-content: center;
@@ -35,6 +57,6 @@
   &__link:focus {
     color: var(--accent-color);
     border: var(--accent-color) 1px solid;
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 }

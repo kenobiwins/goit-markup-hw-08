@@ -1,14 +1,37 @@
 .section-team {
-  @include section();
+  @media screen and (max-width: 1199px) {
+    @include section(60px, 60px);
+  }
+
+  @include mq(desktop) {
+    @include section();
+  }
   background-color: var(--background-section);
 
   &__title {
-    margin-bottom: 50px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+      @include fonts(28px, 42px);
+    }
+    @include mq(desktop) {
+      margin-bottom: 50px;
+      @include fonts(36px, 42px);
+    }
   }
 
   &__team-list {
-    --items: 4;
     gap: var(--indent);
+
+    @media screen and (max-width: 767px) {
+      --items: 1;
+    }
+
+    @include mq(tablet) {
+      --items: 2;
+    }
+    @include mq(desktop) {
+      --items: 4;
+    }
   }
 }
 .team-list {

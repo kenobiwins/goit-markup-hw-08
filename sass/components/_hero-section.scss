@@ -1,27 +1,85 @@
+$hero-gradient: (linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)));
+
 .hero-section {
   width: 100%;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/section-hero/hero-img.jpg);
   background-color: var(--background-second-color);
-  padding: 200px 0;
+  padding: 118px 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 767px) {
+    max-width: 767px;
+    background-image: $hero-gradient, url(/images/section-hero/mobile/Header\ img@1x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/mobile/Header\ img@2x.jpg);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/mobile/Header\ img@3x.jpg);
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 1199px;
+    background-image: $hero-gradient, url(/images/section-hero/tablet/Header\ img@1x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/tablet/Header\ img@2x.jpg);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/tablet/Header\ img@3x.jpg);
+    }
+  }
+
+  @include mq(desktop) {
+    padding: 200px 0;
+    max-width: 1600px;
+    background-image: $hero-gradient, url(/images/section-hero/desktop/Img@1x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/desktop/Img@2x.jpg);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: $hero-gradient, url(/images/section-hero/desktop/Img@3x.jpg);
+    }
+  }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mq(mobile) {
+    }
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(desktop) {
+    }
   }
   &__title {
-    width: 696px;
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     color: var(--white);
+
+    @include mq(mobile) {
+    }
+    @include mq(tablet) {
+      width: 400px;
+    }
+    @include mq(desktop) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+    }
   }
 }
