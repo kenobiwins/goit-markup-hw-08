@@ -101,6 +101,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 100;
 
   &__stick {
     position: absolute;

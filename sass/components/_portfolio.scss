@@ -56,6 +56,8 @@
 
     @include mq(tablet) {
       --items: 2;
+      display: flex;
+      flex-direction: column;
     }
     @include mq(desktop) {
       --items: 3;
@@ -73,6 +75,7 @@
     padding: 20px 24px;
     border: #eeeeee solid 1px;
     border-top: none;
+    flex-grow: 1;
   }
 
   &__wrapper {
@@ -95,13 +98,25 @@
     letter-spacing: 0.03em;
 
     color: var(--primary-text-color);
+
+    @media screen and (max-width: 379px) {
+      @include fonts(14px, 24px);
+    }
+
+    @media screen and (min-width: 380px) and (max-width: 479px) {
+      @include fonts(16px, 24px);
+    }
+
+    @include mq(mobile) {
+      @include fonts(18px, 26px);
+    }
+
+    @include mq(tablet) {
+      @include fonts(18px, 28px);
+    }
   }
 
   &__text--white {
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
-
     color: var(--white);
   }
 
@@ -116,8 +131,16 @@
     transform: translateY(101%);
     transition: transform var(--transition);
 
-    @media screen and (max-width: 767px) {
-      padding: 77px 24px;
+    @media screen and (max-width: 420px) {
+      padding: 24px;
+    }
+
+    @media screen and (min-width: 380px) and (max-width: 479px) {
+      padding: 50px 24px;
+    }
+
+    @include mq(mobile) {
+      padding: 74px 24px;
     }
 
     @include mq(tablet) {

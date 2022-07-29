@@ -7,11 +7,18 @@
 
   &__container {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
       justify-content: space-between;
+    }
+
+    @include mq(tablet) {
+      justify-content: space-around;
+    }
+
+    @include mq(desktop) {
+      justify-content: center;
     }
   }
   &__menu-open {
@@ -34,16 +41,13 @@
       display: flex;
       justify-content: space-around;
       opacity: 0;
-      z-index: 100;
-      align-items: center;
       position: absolute;
-      top: 101%;
+      top: 0;
       left: 0;
       transform: translateX(-100%);
       width: 100%;
-      height: 90vh;
+      height: 100vh;
       flex-direction: column;
-      text-align: center;
       background-color: var(--white);
     }
     @include mq(tablet) {
@@ -66,7 +70,9 @@
 
   &__nav {
     @media screen and (max-width: 767px) {
-      margin-bottom: 160px;
+      @include fonts(40px, 47px, 500, 0.02em);
+      text-indent: 40px;
+      text-align: start;
     }
     @include mq(tablet) {
     }
@@ -75,13 +81,19 @@
   }
   &__contacts {
     @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      text-align: center;
+      @include fonts(32px, 40px, 500, 0.02em);
+      text-indent: 40px;
+    }
+    @include mq(tablet) {
     }
   }
   &__social {
     @media screen and (max-width: 767px) {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include fonts(18px, 22px, 500);
+
       & > li:not(:last-child) {
         .header__link::before {
           content: '';
@@ -104,17 +116,17 @@
     position: relative;
     color: var(--accent-color);
   }
-
-  // &__link::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: 0;
-  //   height: 50%;
-  //   border-left: 1px solid rgba(#212121, 0.2);
-  // }
 }
+
+// &__link::before {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   right: 0;
+//   height: 50%;
+//   border-left: 1px solid rgba(#212121, 0.2);
+// }
 
 .site-nav {
   display: flex;
@@ -147,7 +159,6 @@
     }
   }
 }
-
 .contacts {
   display: flex;
   gap: 50px;
@@ -186,6 +197,10 @@
     gap: 0px;
     .contacts__link {
       padding: 12px 0;
+    }
+    @include mq(tablet) {
+      flex-direction: column;
+      @include fonts(12px, 14px, 500);
     }
   }
 }

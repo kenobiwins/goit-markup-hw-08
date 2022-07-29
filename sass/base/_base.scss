@@ -68,6 +68,12 @@ img {
   display: inline-block;
   transition: color var(--transition);
 
+  @media screen and (max-width: 767px) {
+    &::after {
+      display: none;
+    }
+  }
+
   &::after {
     content: '';
     border: var(--accent-color) 2px solid;
