@@ -12,35 +12,35 @@ $hero-gradient: (linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 
 
   @media screen and (max-width: 767px) {
     max-width: 767px;
-    background-image: $hero-gradient, url(/images/section-hero/mobile/img@1x.jpg);
+    background-image: $hero-gradient, url(../images/section-hero/mobile/img@1x.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/mobile/img@2x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/mobile/img@2x.jpg);
     }
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/mobile/img@3x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/mobile/img@3x.jpg);
     }
   }
 
   @media screen and (max-width: 1199px) {
     max-width: 1199px;
-    background-image: $hero-gradient, url(/images/section-hero/tablet/img@1x.jpg);
+    background-image: $hero-gradient, url(../images/section-hero/tablet/img@1x.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/tablet/img@2x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/tablet/img@2x.jpg);
     }
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/tablet/img@3x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/tablet/img@3x.jpg);
     }
   }
 
   @include mq(desktop) {
     padding: 200px 0;
     max-width: 1600px;
-    background-image: $hero-gradient, url(/images/section-hero/desktop/Img@1x.jpg);
+    background-image: $hero-gradient, url(../images/section-hero/desktop/Img@1x.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/desktop/Img@2x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/desktop/Img@2x.jpg);
     }
     @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      background-image: $hero-gradient, url(/images/section-hero/desktop/Img@3x.jpg);
+      background-image: $hero-gradient, url(../images/section-hero/desktop/Img@3x.jpg);
     }
   }
 
