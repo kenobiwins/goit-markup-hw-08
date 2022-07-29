@@ -1202,7 +1202,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
+    width: 80vw;
+    height: auto;
   }
 }
 
@@ -1294,7 +1295,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .field-enter__checkbox {
-    flex-wrap: wrap;
+    display: block;
   }
 }
 .field-enter__custom-checkbox {

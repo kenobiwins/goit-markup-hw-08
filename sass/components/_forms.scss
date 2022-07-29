@@ -75,7 +75,7 @@
     letter-spacing: 0.03em;
 
     @media screen and (max-width: 767px) {
-      flex-wrap: wrap;
+      display: block;
     }
   }
 
