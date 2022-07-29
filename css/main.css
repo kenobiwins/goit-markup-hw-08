@@ -170,6 +170,7 @@ img {
 @media screen and (max-width: 767px) {
   .header__inner {
     display: flex;
+    justify-content: space-around;
     opacity: 0;
     z-index: 100;
     align-items: center;
