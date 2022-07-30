@@ -211,3 +211,24 @@
   fill: currentColor;
   transition: box-shadow var(--transition);
 }
+
+.icon-letter {
+  @include mq(tablet) {
+    width: 14px;
+    height: 10px;
+  }
+  @include mq(desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.icon-phone {
+  @include mq(tablet) {
+    width: 10px;
+    height: 14px;
+  }
+  @include mq(desktop) {
+    width: 10px;
+    height: 16px;
+  }
+}
