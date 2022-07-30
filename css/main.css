@@ -169,13 +169,13 @@ img {
 }
 .header__inner {
   transition: background-color var(--transition), opacity var(--transition), transform var(--transition);
+  z-index: 10;
 }
 .header__inner.is-open {
   opacity: 1;
   left: 0;
   transform: translateX(0);
   overflow: auto;
-  z-index: 10;
 }
 @media screen and (max-width: 767px) {
   .header__inner {
