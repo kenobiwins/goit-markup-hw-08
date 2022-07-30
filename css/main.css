@@ -335,7 +335,7 @@ img {
     gap: 0px;
   }
   .contacts .contacts__link {
-    padding: 12px 0;
+    padding: 5px 0;
   }
 }
 @media screen and (max-width: 1199px) and (min-width: 768px) {
