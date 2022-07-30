@@ -3,7 +3,13 @@
     @include section(60px, 60px);
   }
 
-  @include section();
+  @include mq(tablet) {
+    @include section(60px, 60px);
+  }
+
+  @include mq(desktop) {
+    @include section();
+  }
 
   .section-portfolio__sample {
     gap: 8px;

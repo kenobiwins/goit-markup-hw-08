@@ -157,11 +157,6 @@ img {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 768px) {
-  .header__container {
-    justify-content: space-around;
-  }
-}
 @media screen and (min-width: 1200px) {
   .header__container {
     justify-content: center;
@@ -201,6 +196,7 @@ img {
   .header__inner {
     display: flex;
     align-items: center;
+    margin-left: auto;
     gap: 84px;
   }
 }
@@ -325,6 +321,9 @@ img {
   color: var(--accent-color);
 }
 @media screen and (max-width: 767px) {
+  .contacts {
+    gap: 32px;
+  }
   .contacts .icon-contact {
     display: none;
   }
@@ -332,7 +331,6 @@ img {
 @media screen and (max-width: 1199px) {
   .contacts {
     flex-direction: column-reverse;
-    gap: 0px;
   }
   .contacts .contacts__link {
     padding: 5px 0;
@@ -341,6 +339,7 @@ img {
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .contacts {
     flex-direction: column;
+    gap: 10px;
     font-size: 12px;
     line-height: 1.17;
     font-weight: 500;
@@ -836,14 +835,22 @@ img {
   border-radius: 50%;
 }
 
-.section-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 @media screen and (max-width: 767px) {
   .section-portfolio {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .section-portfolio .section-portfolio__sample {

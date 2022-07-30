@@ -14,7 +14,6 @@
     }
 
     @include mq(tablet) {
-      justify-content: space-around;
     }
 
     @include mq(desktop) {
@@ -54,6 +53,7 @@
     @include mq(tablet) {
       display: flex;
       align-items: center;
+      margin-left: auto;
       gap: 84px;
     }
     @include mq(desktop) {
@@ -188,6 +188,7 @@
   }
 
   @media screen and (max-width: 767px) {
+    gap: 32px;
     & .icon-contact {
       display: none;
     }
@@ -195,12 +196,12 @@
 
   @media screen and (max-width: 1199px) {
     flex-direction: column-reverse;
-    gap: 0px;
     .contacts__link {
       padding: 5px 0;
     }
     @include mq(tablet) {
       flex-direction: column;
+      gap: 10px;
       @include fonts(12px, 14px, 500);
     }
   }
