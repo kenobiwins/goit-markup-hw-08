@@ -20,7 +20,6 @@
     @include mq(desktop) {
       display: flex;
       flex-wrap: nowrap;
-      align-items: baseline;
       text-align: start;
       gap: 0;
     }
@@ -129,7 +128,6 @@
   }
 
   @include mq(tablet) {
-    flex-grow: 1;
   }
 
   &__form {
@@ -172,6 +170,7 @@
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
   &__input {
+    width: 100%;
     height: 50px;
     padding: 11px 16px;
     background-color: var(--background-second-color);
@@ -184,7 +183,6 @@
     transition: outline var(--transition);
 
     @media screen and (max-width: 767px) {
-      width: 100%;
     }
 
     @include mq(tablet) {
@@ -194,9 +192,6 @@
     @include mq(desktop) {
       width: 358px;
     }
-  }
-
-  &__label {
   }
 
   &__input:focus {
