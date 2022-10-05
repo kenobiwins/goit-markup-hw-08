@@ -12,7 +12,7 @@
   
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
-    refs.body.classList.add("no-scroll");
+    refs.body.classList.toggle("no-scroll");
     if (!refs.modal.classList.contains("is-hidden")) {
       window.addEventListener("keydown", closeModalOnPressEsc);
     }
@@ -21,11 +21,12 @@
   function closeModalonBackdropClick(event) {
     if (event.target === event.currentTarget) {
       refs.modal.classList.add("is-hidden")
+      refs.body.classList.remove("no-scroll")
     }
 
     if (event.code === "Escape") {
       refs.modal.classList.add("is-hidden")
+      refs.body.classList.remove("no-scroll")
     }
-    refs.body.classList.remove("no-scroll")
   };
 })();
